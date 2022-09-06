@@ -1,0 +1,53 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="select_rss_feed_name">
+        <item>知乎每日精选</item>
+        <item>知乎日报</item>
+        <item>机核</item>
+        <item>游研社</item>
+        <item>小众软件</item>
+        <item>联合国新闻</item>
+        <item>书格</item>
+        <item>運動視界</item>
+        <item>上海书评</item>
+        <item>月光博客</item>
+        <item>奇客Solidot</item>
+        <item>Linux中国</item>
+        <item>CGTN-Opinions</item>
+        <item>MSRA</item>
+        <item>算法之道</item>
+        <item>MSDN Magazine</item>
+        <item>理想生活实验室</item>
+        <item>酷壳</item>
+    </string-array>
+    <string-array name="select_rss_feed">
+        <item>https://www.zhihu.com</item>
+        <item>https://plink.anyfeeder.com/zhihu/daily</item>
+        <item>https://www.gcores.com/rss</item>
+        <item>https://www.yystv.cn/rss/feed</item>
+        <item>https://www.appinn.com/feed/</item>
+        <item>https://news.un.org/feed/subscribe/zh/news/all/rss.xml</item>
+        <item>https://new.shuge.org/feed/</item>
+        <item>https://www.sportsv.net/feed</item>
+        <item>https://feedx.net/rss/shanghaishuping.xml</item>
+        <item>https://www.williamlong.info/rss.xml</item>
+        <item>https://www.solidot.org/index.rss</item>
+        <item>https://plink.anyfeeder.com/linux.cn</item>
+        <item>https://plink.anyfeeder.com/cgtn/opinions</item>
+        <item>https://www.msra.cn/feed</item>
+        <item>https://www.deeplearn.me/feed/</item>
+        <item>https://docs.microsoft.com/en-us/msdn-files/feeds/msdn/en-us/magazine/rss.xml</item>
+        <item>https://www.toodaylab.com/feed</item>
+        <item>https://coolshell.cn/feed</item>
+    </string-array>
+</resources>

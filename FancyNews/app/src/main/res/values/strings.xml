@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">FancyNews</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">FancyNews</string>
+    <string name="nav_header_subtitle">By ADu</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">首页</string>
+    <string name="menu_gallery">历史</string>
+    <string name="menu_slideshow">搜索</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_image">Content Image</string>
+    <string name="text_show">显示</string>
+    <string name="text_hide">隐藏</string>
+    <string name="no_result">没找到结果，刷新试试或者换个搜索条件？</string>
+
+    <string-array name="categories_array">
+        <item>"娱乐"</item>
+        <item>"军事"</item>
+        <item>"教育"</item>
+        <item>"文化"</item>
+        <item>"健康"</item>
+        <item>"财经"</item>
+        <item>"体育"</item>
+        <item>"汽车"</item>
+        <item>"科技"</item>
+        <item>"社会"</item>
+    </string-array>
+    <string-array name="categories_default_array">
+        <item>"全部分类"</item>
+        <item>"娱乐"</item>
+        <item>"军事"</item>
+        <item>"教育"</item>
+        <item>"文化"</item>
+        <item>"健康"</item>
+        <item>"财经"</item>
+        <item>"体育"</item>
+        <item>"汽车"</item>
+        <item>"科技"</item>
+        <item>"社会"</item>
+    </string-array>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>
