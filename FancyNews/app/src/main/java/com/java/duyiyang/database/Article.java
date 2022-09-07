@@ -75,8 +75,10 @@ public class Article {
                 for(int i = 0, len = res.length; i < len; i++) {
                     Pattern pattern = Pattern.compile("\\s*(\\S+)\\s*");
                     Matcher matcher = pattern.matcher(res[i]);
-                    if(matcher.find())
+                    if(matcher.find()) {
                         image.add(matcher.group(1));
+                        Log.d("getImage",matcher.group(1));
+                    }
                 }
             }
             String video = item.getString("video");

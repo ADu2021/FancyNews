@@ -1,15 +1,20 @@
 package com.java.duyiyang;
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.MainThread;
@@ -41,6 +46,7 @@ public class ArticleFragment extends Fragment {
     private TextView contentText;
     private WebView webView;
     private FloatingActionButton markButton;
+    private VideoView videoView;
 
     Article article = null;
 
@@ -87,6 +93,7 @@ public class ArticleFragment extends Fragment {
         coverImage = view.findViewById(R.id.article_cover_image);
         contentText = view.findViewById(R.id.article_content);
         webView = view.findViewById(R.id.article_webView);
+        videoView = view.findViewById(R.id.article_videoView);
 
 
         titleText.setText(article.title);
@@ -104,20 +111,35 @@ public class ArticleFragment extends Fragment {
             if(img_cnt > 0)
                 FileController.loadFile(article.idx+"0",article.image.get(0),coverImage,getContext());
             contentText.setText(article.content);
-            for(int i = 1; i < img_cnt; i++) {
+            for(int i = 1; i < img_cnt; i++) { // other images
                 Log.d("load image number", i+article.image.get(i));
                 ImageView iv = new ImageView(getContext());
                 layout.addView(iv);
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 lp.setMargins(0,20,0,20); //(left, top, right, bottom);
+                lp.gravity = Gravity.CENTER;
                 iv.setLayoutParams(lp);
                 FileController.loadFile(article.idx+String.valueOf(i),
                         article.image.get(i),iv,getContext());
             }
-            // todo : video and other images
-            // Log.d("video",article.video.get(0));
-            try {
-                webView.loadUrl(article.video.get(0));
+            try { // video
+                if(article.video.size() > 0 && article.video.get(0).length() > 5){
+                    videoView.setMediaController(new MediaController(getContext()));
+                    videoView.setVideoURI(Uri.parse(article.video.get(0)));
+                    //videoView.setVideoURI(Uri.parse(" https://flv3.people.com.cn/dev1/mvideo/vodfiles/2021/09/07/2eb63e58f8c0b6cee1c2c1dde92940ef_c.mp4"));
+                    Log.d("VideoView", article.video.get(0));
+                    videoView.requestFocus();
+                    videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            videoView.start();
+                        }
+                    });
+
+                } else {
+                    layout.removeView(videoView);
+                }
+                //webView.loadUrl(article.video.get(0));
             } catch (Exception e) {
                 Log.d("webView","loadUrl"+e.getMessage());
             }
