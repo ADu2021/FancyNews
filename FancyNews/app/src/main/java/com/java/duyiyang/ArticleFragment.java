@@ -106,6 +106,7 @@ public class ArticleFragment extends Fragment {
 
         if(rss) {
             webView.loadData(img_helper+article.content, "text/html; charset=utf-8", "UTF-8");
+            layout.removeView(videoView);
         } else {
             int img_cnt = article.image.size();
             if(img_cnt > 0)
